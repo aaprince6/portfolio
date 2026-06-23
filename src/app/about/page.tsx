@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Cpu, Globe, BookOpen, Gamepad2, MapPin, Mail, GraduationCap, Download, ArrowDown } from "lucide-react";
@@ -10,6 +10,7 @@ import Certifications from "@/components/sections/Certifications";
 import GitHubStats from "@/components/sections/GitHubStats";
 import CurrentlyLearning from "@/components/sections/CurrentlyLearning";
 import Testimonials from "@/components/sections/Testimonials";
+import CaptchaDialog from "@/components/ui/CaptchaDialog";
 
 const highlights = [
   { icon: Globe, title: "Web Development", description: "Building responsive, modern websites with Next.js, React, WordPress, and Tailwind CSS for clients.", color: "#2563eb" },
@@ -20,9 +21,17 @@ const highlights = [
 
 export default function AboutPage() {
   const [hover, setHover] = useState(false);
+  const [captchaOpen, setCaptchaOpen] = useState(false);
+  const linkRef = useRef<HTMLAnchorElement>(null);
 
   return (
     <div className="min-h-screen">
+
+      <CaptchaDialog
+        open={captchaOpen}
+        onClose={() => setCaptchaOpen(false)}
+        onSuccess={() => { linkRef.current?.click(); setCaptchaOpen(false); }}
+      />
       <section className="pt-32 pb-16 px-4 relative">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
@@ -105,9 +114,15 @@ export default function AboutPage() {
               </div>
 
               <div className="flex flex-wrap gap-3 mt-8">
-                <motion.a href="/resume.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-primary)] text-white font-semibold hover:shadow-lg hover:shadow-[var(--color-primary)]/25 transition-all duration-300" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.button
+                  onClick={() => setCaptchaOpen(true)}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--color-primary)] text-white font-semibold hover:shadow-lg hover:shadow-[var(--color-primary)]/25 transition-all duration-300 cursor-pointer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Download className="w-4 h-4" /> Download CV
-                </motion.a>
+                </motion.button>
+                <a ref={linkRef} href="/Lazim_Al_Ahasan_CV.pdf" download className="hidden" />
                 <motion.a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-border)] text-[var(--color-text)] hover:border-[var(--color-primary)] transition-all duration-300" whileHover={{ scale: 1.05 }}>
                   Get In Touch
                 </motion.a>

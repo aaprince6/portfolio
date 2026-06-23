@@ -1,8 +1,10 @@
 "use client";
 
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Code2, Gamepad2, Cpu, BookOpen, Download } from "lucide-react";
 import Hero3D from "@/components/three/Hero3D";
+import CaptchaDialog from "@/components/ui/CaptchaDialog";
 
 const roles = [
   { icon: Code2, label: "Web Developer", color: "#2563eb" },
@@ -12,8 +14,16 @@ const roles = [
 ];
 
 export default function HeroSection() {
+  const [captchaOpen, setCaptchaOpen] = useState(false);
+  const linkRef = useRef<HTMLAnchorElement>(null);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[var(--color-bg)]">
+      <CaptchaDialog
+        open={captchaOpen}
+        onClose={() => setCaptchaOpen(false)}
+        onSuccess={() => { linkRef.current?.click(); setCaptchaOpen(false); }}
+      />
       <Hero3D />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -104,16 +114,16 @@ export default function HeroSection() {
           >
             Get In Touch
           </motion.a>
-          <motion.a
-            href="/resume.pdf"
-            download
-            className="px-8 py-3 rounded-full border border-[var(--color-primary)]/50 text-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 transition-all duration-300 inline-flex items-center gap-2"
+          <motion.button
+            onClick={() => setCaptchaOpen(true)}
+            className="px-8 py-3 rounded-full border border-[var(--color-primary)]/50 text-[var(--color-primary)] hover:bg-[var(--color-primary)]/10 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <Download className="w-4 h-4" />
             Download CV
-          </motion.a>
+          </motion.button>
+          <a ref={linkRef} href="/Lazim_Al_Ahasan_CV.pdf" download className="hidden" />
         </motion.div>
       </div>
 
