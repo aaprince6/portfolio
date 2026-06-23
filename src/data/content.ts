@@ -121,6 +121,24 @@ export const projects: Project[] = [
     learning: "Learned REST API integration, OAuth 2.0 authentication flow, Chart.js visualization library, and data aggregation patterns for time-series metrics.",
     results: "Dashboard helped identify that tutorial/fix videos had 3x longer watch time than gameplay highlights, leading to a content strategy shift.",
   },
+  {
+    id: "interactive-clock",
+    title: "Interactive Analog Clock",
+    description: "A browser-based analog clock built with HTML, CSS, and JavaScript featuring real-time updates and smooth animations.",
+    longDescription: "Built a fully functional analog clock that displays the current time with smoothly animated hour, minute, and second hands. Features include a clean minimalist design with a dark theme, 12-hour markings, real-time second-by-second updates using requestAnimationFrame, and responsive sizing for any screen. Built as a front-end fundamentals practice project.",
+    category: "web",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    image: "/projects/clock.png",
+    liveUrl: "https://aaprince6.github.io/clock/",
+    githubUrl: "https://github.com/aaprince6/clock",
+    featured: false,
+    year: 2024,
+    tags: ["Web", "JavaScript", "Frontend"],
+    problem: "Wanted to deepen understanding of DOM manipulation, CSS transforms, and the Date API through a practical visual project.",
+    challenge: "Calculating correct rotation angles for each hand (hour hand accounts for minutes offset, minute hand for seconds offset) and ensuring smooth 60fps animation without jank.",
+    learning: "Reinforced knowledge of requestAnimationFrame timing, CSS transform-origin for rotation pivots, and Date object methods for time extraction. Also learned about canvas vs DOM-based rendering approaches.",
+    results: "A production-ready analog clock running at 60fps with accurate timekeeping across all major browsers.",
+  },
 ];
 
 export const experiences: Experience[] = [
