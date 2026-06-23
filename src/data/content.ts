@@ -60,7 +60,7 @@ export const projects: Project[] = [
     category: "web",
     techStack: ["WordPress", "PHP", "WooCommerce", "JavaScript", "CSS", "MySQL"],
     image: "/projects/ecommerce.png",
-    liveUrl: "https://example.com",
+    liveUrl: "https://aaprince6.github.io/classy-goods/",
     githubUrl: "https://github.com/aaprince6",
     featured: true,
     year: 2024,
