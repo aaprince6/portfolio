@@ -61,7 +61,7 @@ export const projects: Project[] = [
     techStack: ["WordPress", "PHP", "WooCommerce", "JavaScript", "CSS", "MySQL"],
     image: "/projects/ecommerce.png",
     liveUrl: "https://aaprince6.github.io/classy-goods/",
-    githubUrl: "https://github.com/aaprince6",
+    githubUrl: "https://github.com/aaprince6/classy-goods",
     featured: true,
     year: 2024,
     tags: ["Web", "WordPress", "E-Commerce", "Client Work"],
