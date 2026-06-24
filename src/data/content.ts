@@ -139,6 +139,24 @@ export const projects: Project[] = [
     learning: "Reinforced knowledge of requestAnimationFrame timing, CSS transform-origin for rotation pivots, and Date object methods for time extraction. Also learned about canvas vs DOM-based rendering approaches.",
     results: "A production-ready analog clock running at 60fps with accurate timekeeping across all major browsers.",
   },
+  {
+    id: "fx-991cw-calculator",
+    title: "fx-991CW Scientific Calculator",
+    description: "A browser-based scientific calculator emulating the Casio fx-991CW with trigonometric, logarithmic, and statistical functions.",
+    longDescription: "Built a fully functional scientific calculator web app inspired by the Casio fx-991CW. Features include basic arithmetic, trigonometric functions (sin, cos, tan), logarithms, exponentials, factorial, square root, power operations, parentheses for complex expressions, and a clean button layout matching the original calculator's interface. Built with a focus on accurate evaluation using JavaScript's Math library and a custom expression parser.",
+    category: "web",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    image: "/projects/calculator.png",
+    liveUrl: "https://aaprince6.github.io/scientific-calculator/",
+    githubUrl: "https://github.com/aaprince6/scientific-calculator",
+    featured: false,
+    year: 2024,
+    tags: ["Web", "JavaScript", "Math", "Frontend"],
+    problem: "Needed a quick, accessible scientific calculator in the browser without reaching for a physical calculator or downloading an app.",
+    challenge: "Implementing correct operator precedence with parentheses, handling edge cases like division by zero, and building a reliable expression parser that mirrors the fx-991CW's behavior.",
+    learning: "Gained experience with expression parsing algorithms (shunting-yard), JavaScript's eval vs safe evaluation approaches, and CSS grid layouts for calculator button matrices.",
+    results: "A fully responsive scientific calculator that handles complex expressions accurately and works offline as a PWA.",
+  },
 ];
 
 export const experiences: Experience[] = [
