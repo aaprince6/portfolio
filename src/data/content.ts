@@ -74,7 +74,6 @@ export const projects: Project[] = [
     results: "Store launched with 200+ products, processing 15-20 orders per week within the first month of operation.",
   },
 {
-{
     id: "nlp-chatbot-java",
     title: "NLP-Powered Chatbot in Java",
     description: "Rule-based conversational AI with intent recognition, context management, and JavaFX interface.",
