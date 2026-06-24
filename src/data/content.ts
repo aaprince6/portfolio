@@ -1,6 +1,24 @@
 import type { Project, Experience, Skill, Certification, Testimonial, Achievement } from "@/types";
 
 export const projects: Project[] = [
+  {
+    id: "youtube-analytics-dashboard",
+    title: "YouTube Analytics Dashboard",
+    description: "A data-driven dashboard for tracking YouTube channel performance, video metrics, and audience insights using the YouTube Data API.",
+    longDescription: "Built a dedicated analytics dashboard that connects to the YouTube Data API to fetch and display channel statistics, video performance metrics, audience demographics, and growth trends. Features include interactive charts, time-range filtering, top-performing video analysis, and exportable reports. Designed with a clean dark-themed UI optimized for data visualization.",
+    category: "web",
+    techStack: ["JavaScript", "HTML", "CSS", "Chart.js", "YouTube Data API"],
+    image: "/projects/youtube-analytics.png",
+    liveUrl: "https://aaprince6.github.io/YouTubeAnalyticsDashboard/",
+    githubUrl: "https://github.com/aaprince6/YouTubeAnalyticsDashboard",
+    featured: false,
+    year: 2025,
+    tags: ["Web", "Data", "API", "YouTube", "Dashboard"],
+    problem: "Needed a dedicated, customizable analytics dashboard beyond what YouTube Studio offers, with the ability to drill down into specific metrics and time periods.",
+    challenge: "Handling YouTube Data API quota limits and pagination while fetching comprehensive analytics data across multiple videos and time ranges.",
+    learning: "Deepened understanding of REST API integration, OAuth 2.0, data visualization with Chart.js, and building responsive data dashboards.",
+    results: "A fully functional analytics dashboard that provides actionable insights for content strategy optimization.",
+  },
 {
     id: "fx-991cw-calculator",
     title: "fx-991CW Scientific Calculator",
@@ -56,22 +74,6 @@ export const projects: Project[] = [
     results: "Store launched with 200+ products, processing 15-20 orders per week within the first month of operation.",
   },
 {
-    id: "youtube-content-analytics",
-    title: "YouTube Analytics Dashboard",
-    description: "Data dashboard tracking channel performance, video metrics, and audience growth patterns.",
-    longDescription: "Built a personal analytics dashboard using YouTube Data API to track channel performance. Displays view counts, subscriber growth, watch time, top-performing content, audience demographics, and video-level analytics. Built with vanilla JavaScript and Chart.js for data visualization.",
-    category: "web",
-    techStack: ["JavaScript", "HTML", "CSS", "Chart.js", "YouTube Data API"],
-    image: "/projects/youtube-analytics.png",
-    githubUrl: "https://github.com/aaprince6",
-    featured: false,
-    year: 2024,
-    tags: ["Web", "Data", "API", "YouTube"],
-    problem: "YouTube Studio's built-in analytics were not flexible enough for the custom reports needed to optimize content strategy.",
-    challenge: "Working around YouTube Data API quota limits while fetching detailed analytics for multiple videos across different time periods.",
-    learning: "Learned REST API integration, OAuth 2.0 authentication flow, Chart.js visualization library, and data aggregation patterns for time-series metrics.",
-    results: "Dashboard helped identify that tutorial/fix videos had 3x longer watch time than gameplay highlights, leading to a content strategy shift.",
-  },
 {
     id: "nlp-chatbot-java",
     title: "NLP-Powered Chatbot in Java",
