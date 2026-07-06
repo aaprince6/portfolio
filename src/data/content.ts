@@ -2,6 +2,24 @@ import type { Project, Experience, Skill, Certification, Testimonial, Achievemen
 
 export const projects: Project[] = [
   {
+    id: "snake-game",
+    title: "Snake Game",
+    description: "Classic Snake game built with vanilla JavaScript — responsive, keyboard and touch controls, progressive difficulty.",
+    longDescription: "Developed the classic Snake game from scratch using HTML Canvas and vanilla JavaScript. Features include keyboard arrow key and touch swipe controls, progressively increasing speed as the snake grows, score tracking, collision detection, and a clean retro-styled UI. Fully responsive across desktop and mobile browsers.",
+    category: "web",
+    techStack: ["JavaScript", "HTML", "CSS"],
+    image: "/projects/snake-game.png",
+    liveUrl: "https://aaprince6.github.io/snake-game/",
+    githubUrl: "https://github.com/aaprince6/snake-game",
+    featured: false,
+    year: 2025,
+    tags: ["Web", "Game", "JavaScript", "Canvas"],
+    problem: "Wanted a lightweight, playable Snake game that works instantly in the browser without any downloads or dependencies.",
+    challenge: "Implementing smooth game loop timing with requestAnimationFrame, handling simultaneous direction changes, and ensuring touch controls feel natural on mobile.",
+    learning: "Reinforced understanding of game loop architecture, canvas rendering, collision detection algorithms, and responsive input handling across devices.",
+    results: "A polished, fully playable Snake game that runs smoothly on both desktop and mobile browsers with zero dependencies.",
+  },
+  {
     id: "youtube-analytics-dashboard",
     title: "YouTube Analytics Dashboard",
     description: "A data-driven dashboard for tracking YouTube channel performance, video metrics, and audience insights using the YouTube Data API.",
