@@ -2,6 +2,24 @@ import type { Project, Experience, Skill, Certification, Testimonial, Achievemen
 
 export const projects: Project[] = [
   {
+    id: "somewhere-with-you",
+    title: "Some Where With You",
+    description: "A location-based web app for discovering and sharing places, built with a clean modern UI.",
+    longDescription: "Developed a location-based web application for discovering, saving, and sharing places. Features include interactive map integration, place search with filtering, user-created listings, and a responsive modern interface. Designed to make finding and recommending local spots intuitive and enjoyable.",
+    category: "web",
+    techStack: ["JavaScript", "HTML", "CSS", "Map API"],
+    image: "/projects/somewhere-with-you.png",
+    liveUrl: "https://somewhere-with-you-six.vercel.app/",
+    githubUrl: "https://github.com/aaprince6/somewhere-with-you",
+    featured: false,
+    year: 2025,
+    tags: ["Web", "Maps", "Location", "Search"],
+    problem: "Needed a simple, user-friendly platform for discovering and sharing local places beyond generic map apps.",
+    challenge: "Integrating map services with dynamic place data, handling geolocation permissions gracefully, and keeping the UI responsive across devices.",
+    learning: "Gained experience with location-based web features, map API integration, and building place-search UIs with real-time filtering.",
+    results: "A functional place-discovery app with search, filtering, and a polished responsive interface.",
+  },
+  {
     id: "snake-game",
     title: "Snake Game",
     description: "Classic Snake game built with vanilla JavaScript — responsive, keyboard and touch controls, progressive difficulty.",
