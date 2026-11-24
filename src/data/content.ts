@@ -2,6 +2,24 @@ import type { Project, Experience, Skill, Certification, Testimonial, Achievemen
 
 export const projects: Project[] = [
   {
+    id: "vape-bro",
+    title: "VAPE BRO",
+    description: "E-commerce platform for vape products with product catalog, cart, and checkout.",
+    longDescription: "Built a complete e-commerce platform for vape products featuring a responsive product catalog, shopping cart with persistent storage, checkout flow, and modern UI optimized for mobile users. Includes product filtering, search, and secure payment integration.",
+    category: "web",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    image: "/projects/vape-bro.png",
+    liveUrl: "https://vapebro.vercel.app/",
+    githubUrl: "https://github.com/aaprince6/vape-bro",
+    featured: true,
+    year: 2025,
+    tags: ["Web", "E-Commerce", "Next.js", "React"],
+    problem: "Needed a modern, mobile-first e-commerce platform for vape products with smooth checkout and product browsing experience.",
+    challenge: "Building a performant product catalog with filtering and search while maintaining fast load times on mobile networks.",
+    learning: "Gained experience with Next.js App Router for e-commerce, server components for product data, and optimized image loading for product galleries.",
+    results: "Launched a production-ready vape e-commerce site with responsive design and fast checkout flow.",
+  },
+  {
     id: "somewhere-with-you",
     title: "Some Where With You",
     description: "A location-based web app for discovering and sharing places, built with a clean modern UI.",
